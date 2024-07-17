@@ -84,6 +84,17 @@ in {
         bind \cl forward-char
         bind \ch backward-char
 
+        function last_history_item
+          echo $history[1]
+        end
+
+        function last_history_item_args
+          echo $history[1] | cut -f 2- -d " "
+        end
+
+        abbr -a !! --position anywhere --function last_history_item # Last command
+        abbr -a \?\? --position anywhere --function last_history_item_args # Last command without the first word
+
         if [ "$TERM" = "linux" ] && type -q starship
           source (starship init fish --print-full-init | psub)
         else if type -q oh-my-posh
