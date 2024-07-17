@@ -8,25 +8,27 @@
 
 # TODO
 
+- [ ] Check if playerctl is enabled
+
 - [x] nh - NixOs helper
 - [x] Locales
-- [ ] Keyboard layout
+- [x] Keyboard layout
 - [x] TTY colours
 - [x] fish
 - [x] sudo insults and pw_feedback
-- [ ] pam fail delay
-- [ ] cli programs
-    - [ ] jq
-    - [ ] fd
-    - [ ] dust
-    - [ ] tldr
-    - [ ] ripgrep
-    - [ ] bat
-    - [ ] eza
-    - [ ] croc
-    - [ ] fzf
-    - [ ] btop
-- [ ] wakatime
+- [x] cli programs
+    - [x] jq
+    - [x] fd
+    - [x] dust
+    - [x] tealdeer
+    - [x] ripgrep
+    - [x] bat
+    - [x] eza
+    - [x] croc
+    - [x] fzf
+    - [x] btop
+    - [x] ffmpeg
+- [x] wakatime
 - [ ] [Neovim](https://nixos.wiki/wiki/Neovim)
     - [ ] Install LSPs
     - [ ] Install Formatters
@@ -34,13 +36,11 @@
     - [ ] Typst inline preview plugin (mathematical equations are separately complied and showed above their code)
     - [ ] rustceanvim
 - [ ] kitty
-- [ ] [Yubikey](https://nixos.wiki/wiki/Yubikey)
-    - [ ] SSH support
+- [x] [Yubikey](https://nixos.wiki/wiki/Yubikey)
+    - [x] SSH support
 - [x] git & delta
-- [ ] GnuPG
+- [x] GnuPG
 - [x] gh
-- [ ] Bluetooth
-- [ ] Cachix
 - [ ] [Firefox](https://nixos.wiki/wiki/Firefox)
     - [ ] Config
     - [ ] Addons
@@ -48,7 +48,7 @@
     - [ ] ff2mpv
     - [ ] YouTube different shortcuts (h and l to skip 5 secs)
 - [ ] [Hardware video acceleration](https://nixos.wiki/wiki/Accelerated_Video_Playback)
-- [ ] Desktop Apps
+- [ ] Desktop
     - [ ] [Spotify](https://nixos.wiki/wiki/Spotify) & [spicetify](https://github.com/the-argus/spicetify-nix)
     - [ ] Discord
         - [ ] Screen sharing support on Wayland
@@ -56,6 +56,7 @@
     - [ ] Image viewer (gwenview)
     - [ ] GTK Theme
     - [ ] QT Theme
+    - [ ] Mime types
 - [ ] rust toolchain
 - [ ] Learn nixos commands
 - [ ] Learn how to pin packages (easily)
@@ -100,14 +101,13 @@
     - [ ] ssh
 - [ ] Fonts
 - [ ] System-wide spell checking
-- [ ] Periodic automatic backups (they send a notification when the backup time has come and send them repeatedly in small time intervals until a thumbdrive containing a certaing directory is connected and the backup completed (in the future switch to homeserver remote backups))
 - [ ] Hibernation
 - [ ] noisetorch
 - [ ] Firewall
     - [ ] Secure firewall (all ports blocked)
     - [ ] VPN support
     - [ ] VM support
- [ ] VPN
+- [ ] VPN
 - [ ] Pam delay
 - [ ] Libinput
 - [ ] Dualscreen on boot
@@ -115,15 +115,16 @@
 - [x] Home-manager
 - [ ] Modules
     - [x] Virtual-machines
+    - [x] Bluetooth
     - [ ] Nvidia
     - [ ] Games
-    - [ ] Bluetooth
     - [ ] Enable modules inside flakes
 - [ ] ISO
 - [ ] Additional configuration
     - [Arch Linux tweaks](https://gist.github.com/lbrame/1678c00213c2bd069c0a59f8733e0ee6)
     - [ ] System-wide single colour theme
     - [ ] Kamack38 square plymouth theme
+    - [ ] Periodic automatic backups (they send a notification when the backup time has come and send them repeatedly in small time intervals until a thumbdrive containing a certaing directory is connected and the backup completed (in the future switch to homeserver remote backups))
 - [ ] Additional programs
     - [ ] Local GPT assistant that parses files and gives information found in them when asked
    

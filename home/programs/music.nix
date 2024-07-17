@@ -5,9 +5,10 @@
     playlistDirectory = "${config.var.homeDirectory}/Music/playlists";
   };
   services.mpd-mpris.enable = true;
-  programs.cava.enable = true;
-  # programs.playerctl.enable = true;
-  # programs.mpd.enable = true;
-  programs.ncmpcpp.enable = true;
   services.playerctld.enable = true;
+
+  programs.cava.enable = true;
+  programs.ncmpcpp.enable = true;
+
+  home.packages = with pkgs; [ ffmpeg sptlrx ];
 }

@@ -82,6 +82,7 @@ in {
   };
 
   desktop.enable = true;
+  bluetooth.enable = true;
   services = {
     xserver = { enable = true; };
 

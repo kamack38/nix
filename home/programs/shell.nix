@@ -191,6 +191,10 @@ in {
     };
     plugins = [
       {
+        name = "wakatime";
+        src = pkgs.fishPlugins.wakatime-fish.src;
+      }
+      {
         name = "z";
         src = pkgs.fetchFromGitHub {
           owner = "jethrokuan";
@@ -225,18 +229,24 @@ in {
       update_ms = "100";
     };
   };
-  # programs.dust.enable = true;
-  # programs.tldr.enable = true;
+  programs.tealdeer = {
+    enable = true;
+    settings = {
+      style = {
+        command_name.foreground = "red";
+        example_text.foreground = "green";
+        example_code.foreground = "blue";
+        example_variable = {
+          foreground = "blue";
+          underline = true;
+        };
+      };
+      updates.auto_update = true;
+    };
+  };
   programs.jq.enable = true;
-  # programs.croc.enable = true;
-
-  # Video 
-  # programs.ffmpeg.enable = true;
+  programs.fd.enable = true;
 
   programs.fzf.enable = true;
-  # programs.libqalculate.enable = true;
-  # programs.crabz.enable = true;
-  # programs.brightnessctl.enable = true;
-  # programs.sptlrx.enable = true;
 
 }
