@@ -1,0 +1,129 @@
+# INFO
+
+- [Noogle](https://noogle.dev/)
+- [Options](https://search.nixos.org/options?channel=24.05&size=50&sort=relevance&type=packages&query=fetch)
+- [Packages](https://search.nixos.org/packages?channel=24.05&size=50&sort=relevance&type=packages&query=fetch)
+- [Nixy](https://github.com/anotherhadi/nixy/blob/main/hosts/laptop/configuration.nix)
+- [MyNixOs](https://mynixos.com/)
+
+# TODO
+
+- [x] nh - NixOs helper
+- [x] Locales
+- [ ] Keyboard layout
+- [x] TTY colours
+- [x] fish
+- [x] sudo insults and pw_feedback
+- [ ] pam fail delay
+- [ ] cli programs
+    - [ ] jq
+    - [ ] fd
+    - [ ] dust
+    - [ ] tldr
+    - [ ] ripgrep
+    - [ ] bat
+    - [ ] eza
+    - [ ] croc
+    - [ ] fzf
+    - [ ] btop
+- [ ] wakatime
+- [ ] [Neovim](https://nixos.wiki/wiki/Neovim)
+    - [ ] Install LSPs
+    - [ ] Install Formatters
+    - [ ] Harpoon with harpoon-line
+    - [ ] Typst inline preview plugin (mathematical equations are separately complied and showed above their code)
+    - [ ] rustceanvim
+- [ ] kitty
+- [ ] [Yubikey](https://nixos.wiki/wiki/Yubikey)
+    - [ ] SSH support
+- [x] git & delta
+- [ ] GnuPG
+- [x] gh
+- [ ] Bluetooth
+- [ ] Cachix
+- [ ] [Firefox](https://nixos.wiki/wiki/Firefox)
+    - [ ] Config
+    - [ ] Addons
+        - [ ] Vimium or Tridactyl
+    - [ ] ff2mpv
+    - [ ] YouTube different shortcuts (h and l to skip 5 secs)
+- [ ] [Hardware video acceleration](https://nixos.wiki/wiki/Accelerated_Video_Playback)
+- [ ] Desktop Apps
+    - [ ] [Spotify](https://nixos.wiki/wiki/Spotify) & [spicetify](https://github.com/the-argus/spicetify-nix)
+    - [ ] Discord
+        - [ ] Screen sharing support on Wayland
+    - [ ] Dolphin (or other file manager)
+    - [ ] Image viewer (gwenview)
+    - [ ] GTK Theme
+    - [ ] QT Theme
+- [ ] rust toolchain
+- [ ] Learn nixos commands
+- [ ] Learn how to pin packages (easily)
+- [x] mpv
+    - [ ] sponsorblock
+    - [ ] cheatsheet
+    - [ ] webtorrent-mpv-hook
+    - [x] yt-dlp
+- [x] mpd & mpris
+- [ ] playerctld (playerctl daemon)
+- [ ] Hyprland (with current settings)
+    - [ ] Hyprlock
+    - [ ] Hypridle
+    - [ ] Hyprpaper
+    - [ ] waybar
+        - [ ] brightnessctl
+- [ ] SDDM
+    - [ ] Autologin
+    - [ ] Plymouth
+        - [ ] [adi1090x themes](https://github.com/adi1090x/plymouth-themes/pull/46/files)
+        - [ ] GreenLeaf plymouth theme
+    - [ ] GreenLeaf Theme
+        - [ ] Create theme repo
+- [ ] Coursor theme
+    - [ ] Hyprcursor (maybe)
+    - [ ] Fluent coursor theme
+- [ ] Fluent dark icon theme
+- [ ] Hardware configuration
+    - [ ] Asusctl
+    - [ ] Openrazer
+    - [ ] Piper
+    - [ ] Streamdeck
+    - [ ] Nvidia
+    - [ ] AMD
+- [ ] Performance tweaks
+    - [ ] Ananicy-cpp
+- [ ] Powersave tweaks (only when not charging)
+- [ ] Flatpaks
+- [ ] System hardening
+    - [ ] rkhunter
+    - [ ] lynis
+    - [ ] ssh
+- [ ] Fonts
+- [ ] System-wide spell checking
+- [ ] Periodic automatic backups (they send a notification when the backup time has come and send them repeatedly in small time intervals until a thumbdrive containing a certaing directory is connected and the backup completed (in the future switch to homeserver remote backups))
+- [ ] Hibernation
+- [ ] noisetorch
+- [ ] Firewall
+    - [ ] Secure firewall (all ports blocked)
+    - [ ] VPN support
+    - [ ] VM support
+ [ ] VPN
+- [ ] Pam delay
+- [ ] Libinput
+- [ ] Dualscreen on boot
+- [ ] [Docker](https://nixos.wiki/wiki/Docker)
+- [x] Home-manager
+- [ ] Modules
+    - [x] Virtual-machines
+    - [ ] Nvidia
+    - [ ] Games
+    - [ ] Bluetooth
+    - [ ] Enable modules inside flakes
+- [ ] ISO
+- [ ] Additional configuration
+    - [Arch Linux tweaks](https://gist.github.com/lbrame/1678c00213c2bd069c0a59f8733e0ee6)
+    - [ ] System-wide single colour theme
+    - [ ] Kamack38 square plymouth theme
+- [ ] Additional programs
+    - [ ] Local GPT assistant that parses files and gives information found in them when asked
+   
