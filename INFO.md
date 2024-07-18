@@ -35,7 +35,7 @@
     - [ ] Harpoon with harpoon-line
     - [ ] Typst inline preview plugin (mathematical equations are separately complied and showed above their code)
     - [ ] rustceanvim
-- [ ] kitty
+- [x] kitty
 - [x] [Yubikey](https://nixos.wiki/wiki/Yubikey)
     - [x] SSH support
 - [x] git & delta
@@ -100,6 +100,7 @@
     - [ ] lynis
     - [ ] ssh
 - [ ] Fonts
+    - [ ] kitty
 - [ ] System-wide spell checking
 - [ ] Hibernation
 - [ ] noisetorch
