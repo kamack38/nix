@@ -69,8 +69,8 @@
 - [ ] Add scripts
     - [ ] lock
 - [ ] Hyprland (with current settings)
-    - [ ] Hyprlock
-    - [ ] Hypridle
+    - [x] Hyprlock
+    - [x] Hypridle
     - [x] Hyprpaper
     - [ ] waybar
         - [ ] brightnessctl
