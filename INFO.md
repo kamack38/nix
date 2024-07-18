@@ -67,7 +67,7 @@
 - [ ] Add assets
     - [ ] Dunst
 - [ ] Add scripts
-    - [ ] lock
+    - [ ] Hyprlock
 - [ ] Hyprland (with current settings)
     - [x] Hyprlock
     - [x] Hypridle
@@ -116,9 +116,9 @@
 - [ ] Pam delay
 - [ ] Libinput
 - [ ] Dualscreen on boot
-- [ ] [Docker](https://nixos.wiki/wiki/Docker)
 - [x] Home-manager
 - [ ] Modules
+    - [x] [Docker](https://nixos.wiki/wiki/Docker)
     - [x] Virtual-machines
     - [x] Bluetooth
     - [ ] Nvidia

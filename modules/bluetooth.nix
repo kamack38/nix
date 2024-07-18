@@ -1,10 +1,6 @@
-{ inputs, lib, config, pkgs, ... }:
-let
-  cfg = config.virt;
-  inherit (builtins) attrValues;
+{ lib, config, pkgs, ... }:
+let cfg = config.bluetooth;
 in {
-  imports =
-    attrValues { inherit (inputs.home-manager.nixosModules) home-manager; };
   options.bluetooth = { enable = lib.mkEnableOption "Bluetooth"; };
 
   config = lib.mkIf cfg.enable {
