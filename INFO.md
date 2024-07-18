@@ -43,8 +43,8 @@
 - [x] gh
 - [ ] [Firefox](https://nixos.wiki/wiki/Firefox)
     - [ ] Config
-    - [ ] Addons
-        - [ ] Vimium or Tridactyl
+    - [x] Addons
+        - [x] Vimium or Tridactyl
     - [ ] ff2mpv
     - [ ] YouTube different shortcuts (h and l to skip 5 secs)
 - [ ] [Hardware video acceleration](https://nixos.wiki/wiki/Accelerated_Video_Playback)
@@ -126,6 +126,7 @@
     - [ ] System-wide single colour theme
     - [ ] Kamack38 square plymouth theme
     - [ ] Periodic automatic backups (they send a notification when the backup time has come and send them repeatedly in small time intervals until a thumbdrive containing a certaing directory is connected and the backup completed (in the future switch to homeserver remote backups))
+    - [ ] [Package firefox extensions](https://sr.ht/~rycee/mozilla-addons-to-nix/)
 - [ ] Additional programs
     - [ ] Local GPT assistant that parses files and gives information found in them when asked
    

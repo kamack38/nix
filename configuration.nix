@@ -115,7 +115,10 @@ in {
     experimental-features = [ "nix-command" "flakes" ];
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = (_: true);
+  };
   services.libinput.enable = true;
   services.dbus.enable = true;
 

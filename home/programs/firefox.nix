@@ -1,10 +1,16 @@
-{ pkgs, config }: {
+{ pkgs, config, inputs, ... }: {
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = (_: true);
+  };
+  # sdfsdd
   programs.firefox = {
     enable = true;
     package = pkgs.firefox-devedition;
     profiles.${config.var.username} = {
       isDefault = true;
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      nativeMessagingHosts.ff2mpv = true;
+      extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
         bypass-paywalls-clean
         ublock-origin
         darkreader
