@@ -4,6 +4,10 @@
     sudo.extraConfig = "Defaults pwfeedback,insults";
     lockKernelModules = lib.mkDefault true;
     protectKernelImage = lib.mkDefault true;
+    pam.services."system-login".failDelay = {
+      enable = true;
+      delay = 4000000;
+    };
   };
 
   # enable firejail

@@ -113,7 +113,7 @@
     - [ ] VPN support
     - [ ] VM support
 - [ ] VPN
-- [ ] Pam delay
+- [x] Pam delay
 - [ ] Libinput
 - [ ] Dualscreen on boot
 - [x] Home-manager
