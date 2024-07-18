@@ -17,6 +17,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     spicetify-nix.url = "github:the-argus/spicetify-nix";
 
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";

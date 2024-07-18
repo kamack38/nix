@@ -51,14 +51,12 @@
     - [ ] [Spotify](https://nixos.wiki/wiki/Spotify) & [spicetify](https://github.com/the-argus/spicetify-nix)
     - [x] Discord
         - [x] Screen sharing support on Wayland via xwaylandvideobridge
-    - [ ] Dolphin (or other file manager)
+    - [x] Dolphin (or other file manager)
     - [ ] Image viewer (gwenview)
     - [ ] GTK Theme
     - [ ] QT Theme
     - [ ] Mime types
-- [ ] rust toolchain
-- [ ] Learn nixos commands
-- [ ] Learn how to pin packages (easily)
+- [x] Rust toolchain
 - [x] mpv
     - [ ] sponsorblock
     - [ ] cheatsheet
@@ -129,4 +127,5 @@
     - [ ] [Package firefox extensions](https://sr.ht/~rycee/mozilla-addons-to-nix/)
 - [ ] Additional programs
     - [ ] Local GPT assistant that parses files and gives information found in them when asked
-   
+- [ ] Learn nixos commands
+- [ ] Learn how to pin packages (easily)
