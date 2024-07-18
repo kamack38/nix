@@ -42,16 +42,15 @@
 - [x] GnuPG
 - [x] gh
 - [ ] [Firefox](https://nixos.wiki/wiki/Firefox)
-    - [ ] Config
-    - [x] Addons
+    - [x] Config
+    - [ ] Addons
         - [x] Vimium or Tridactyl
-    - [ ] ff2mpv
+    - [x] ff2mpv
     - [ ] YouTube different shortcuts (h and l to skip 5 secs)
-- [ ] [Hardware video acceleration](https://nixos.wiki/wiki/Accelerated_Video_Playback)
 - [ ] Desktop
     - [ ] [Spotify](https://nixos.wiki/wiki/Spotify) & [spicetify](https://github.com/the-argus/spicetify-nix)
-    - [ ] Discord
-        - [ ] Screen sharing support on Wayland
+    - [x] Discord
+        - [x] Screen sharing support on Wayland via xwaylandvideobridge
     - [ ] Dolphin (or other file manager)
     - [ ] Image viewer (gwenview)
     - [ ] GTK Theme
@@ -90,6 +89,7 @@
     - [ ] Piper
     - [ ] Streamdeck
     - [ ] Nvidia
+    - [ ] [Hardware video acceleration](https://nixos.wiki/wiki/Accelerated_Video_Playback)
     - [ ] AMD
 - [ ] Performance tweaks
     - [ ] Ananicy-cpp
