@@ -64,12 +64,16 @@
     - [x] yt-dlp
 - [x] mpd & mpris
 - [x] playerctld (playerctl daemon)
+- [ ] Add assets
+    - [ ] Dunst
 - [ ] Hyprland (with current settings)
     - [ ] Hyprlock
     - [ ] Hypridle
-    - [ ] Hyprpaper
+    - [x] Hyprpaper
     - [ ] waybar
         - [ ] brightnessctl
+    - [x] dunst
+    - [ ] application launcher (rofi)
 - [ ] SDDM
     - [ ] Autologin
     - [ ] Plymouth

@@ -42,6 +42,16 @@
         c14 = "56b6c2";
         c15 = "ffffff";
       };
+      wallpapers = [
+        {
+          monitor = "eDP-1";
+          wallpaper = "~/Pictures/Wallpapers/Annapurna Massif Himalayas.jpg";
+        }
+        {
+          monitor = "DP-1";
+          wallpaper = "~/Pictures/Wallpapers/Pine Trees - Thomas Griesbeck.jpg";
+        }
+      ];
     };
   };
 }

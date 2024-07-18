@@ -2,22 +2,12 @@
   config = lib.mkIf config.desktop.enable {
     wayland.windowManager.hyprland = {
       enable = true;
+      systemd.variables = [ "--all" ];
       settings = {
-        decoration = {
-          shadow_offset = "0 5";
-          "col.shadow" = "rgba(00000099)";
-        };
 
-        "$mod" = "SUPER";
-
-        bind = [ "$mod, grave, exec, kitty" ];
-
-        bindm = [
-          # mouse movements
-          "$mod, mouse:272, movewindow"
-          "$mod, mouse:273, resizewindow"
-          "$mod ALT, mouse:272, resizewindow"
-        ];
+        #### Monitor
+        # See https://wiki.hyprland.org/Configuring/Monitors/
+        monitor = ",highrr,auto,1";
       };
     };
   };
