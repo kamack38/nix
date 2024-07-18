@@ -150,6 +150,9 @@
       mpv-playlistmanager
       quality-menu
       thumbfast
+      mpv_sponsorblock_minimal
+      webtorrent-mpv-hook
+      mpv-cheatsheet
     ];
   };
 

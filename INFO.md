@@ -58,12 +58,12 @@
     - [ ] Mime types
 - [x] Rust toolchain
 - [x] mpv
-    - [ ] sponsorblock
-    - [ ] cheatsheet
-    - [ ] webtorrent-mpv-hook
+    - [x] sponsorblock
+    - [x] cheatsheet
+    - [x] webtorrent-mpv-hook
     - [x] yt-dlp
 - [x] mpd & mpris
-- [ ] playerctld (playerctl daemon)
+- [x] playerctld (playerctl daemon)
 - [ ] Hyprland (with current settings)
     - [ ] Hyprlock
     - [ ] Hypridle
