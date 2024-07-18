@@ -150,7 +150,7 @@
       mpv-playlistmanager
       quality-menu
       thumbfast
-      mpv_sponsorblock_minimal
+      sponsorblock-minimal
       webtorrent-mpv-hook
       mpv-cheatsheet
     ];

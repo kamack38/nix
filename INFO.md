@@ -66,6 +66,8 @@
 - [x] playerctld (playerctl daemon)
 - [ ] Add assets
     - [ ] Dunst
+- [ ] Add scripts
+    - [ ] lock
 - [ ] Hyprland (with current settings)
     - [ ] Hyprlock
     - [ ] Hypridle
