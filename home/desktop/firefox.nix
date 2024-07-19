@@ -3,7 +3,6 @@
     allowUnfree = true;
     allowUnfreePredicate = (_: true);
   };
-  # sdfsdd
   programs.firefox = {
     enable = true;
     package = pkgs.firefox-devedition;

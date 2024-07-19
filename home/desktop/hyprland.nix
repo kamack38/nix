@@ -1,15 +1,13 @@
-{ config, lib, pkgs, ... }: {
-  config = lib.mkIf config.desktop.enable {
-    wayland.windowManager.hyprland = {
-      enable = true;
-      package = pkgs.hyprland;
-      systemd.variables = [ "--all" ];
-      settings = {
+{ pkgs, ... }: {
+  wayland.windowManager.hyprland = {
+    enable = true;
+    package = pkgs.hyprland;
+    systemd.variables = [ "--all" ];
+    settings = {
 
-        #### Monitor
-        # See https://wiki.hyprland.org/Configuring/Monitors/
-        monitor = ",highrr,auto,1";
-      };
+      #### Monitor
+      # See https://wiki.hyprland.org/Configuring/Monitors/
+      monitor = ",highrr,auto,1";
     };
   };
 }
