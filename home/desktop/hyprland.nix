@@ -1,7 +1,8 @@
-{ config, lib, ... }: {
+{ config, lib, pkgs, ... }: {
   config = lib.mkIf config.desktop.enable {
     wayland.windowManager.hyprland = {
       enable = true;
+      package = pkgs.hyprland;
       systemd.variables = [ "--all" ];
       settings = {
 

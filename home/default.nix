@@ -1,6 +1,9 @@
-{ config, pkgs, ... }: {
-  imports = map (f: ./programs + "/${f}")
-    (builtins.attrNames (builtins.readDir ./programs)) ++ [ ../variables.nix ];
+{ config, pkgs, utils, ... }:
+let inherit (utils) readFromDir;
+in {
+  imports = (readFromDir ./dev) ++ (readFromDir ./programs)
+    ++ [ ../variables.nix ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = config.var.username;
@@ -13,14 +16,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = with pkgs; [
-    dolphin
-    dust
-    croc
-    libqalculate
-    qalculate-qt
-    wakatime
-  ];
+  home.packages = with pkgs; [ dolphin dust croc libqalculate qalculate-qt ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.

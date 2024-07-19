@@ -191,10 +191,6 @@ in {
     };
     plugins = [
       {
-        name = "wakatime";
-        src = pkgs.fishPlugins.wakatime-fish.src;
-      }
-      {
         name = "z";
         src = pkgs.fetchFromGitHub {
           owner = "jethrokuan";

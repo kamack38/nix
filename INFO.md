@@ -28,7 +28,6 @@
     - [x] fzf
     - [x] btop
     - [x] ffmpeg
-- [x] wakatime
 - [ ] [Neovim](https://nixos.wiki/wiki/Neovim)
     - [ ] Install LSPs
     - [ ] Install Formatters
@@ -121,6 +120,7 @@
     - [x] [Docker](https://nixos.wiki/wiki/Docker)
     - [x] Virtual-machines
     - [x] Bluetooth
+    - [x] wakatime
     - [ ] Nvidia
     - [ ] Games
     - [ ] Enable modules inside flakes

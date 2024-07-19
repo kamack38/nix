@@ -53,7 +53,10 @@ in {
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {
+      inherit inputs;
+      inherit utils;
+    };
     users = { ${config.var.username} = import ./home; };
   };
 
@@ -84,7 +87,10 @@ in {
   desktop.enable = true;
   bluetooth.enable = true;
   services = {
-    xserver = { enable = true; };
+    xserver = {
+      enable = true;
+      xkb.layout = config.var.keyboardLayout;
+    };
 
     displayManager = {
       sddm.enable = true;

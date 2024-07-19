@@ -46,17 +46,16 @@
           ./configuration.nix
         ];
       };
-      iso = {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          (nixpkgs
-            + "/nixos/modules//installer/cd-dvd/installation-cd-minimal.nix")
-          inputs.home-manager.nixosModules.default
-          ./configuration.nix
-        ];
-
-      };
+      # iso = {
+      #   system = "x86_64-linux";
+      #   specialArgs = { inherit inputs; };
+      #   modules = [
+      #     (nixpkgs
+      #       + "/nixos/modules//installer/cd-dvd/installation-cd-minimal.nix")
+      #     inputs.home-manager.nixosModules.default
+      #     ./configuration.nix
+      #   ];
+      # };
     };
   };
 }

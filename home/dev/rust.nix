@@ -1,6 +1,6 @@
-{ pkgs, fenix, ... }: {
-  nixpkgs.overlays = [ fenix.overlays.default ];
-  environment.systemPackages = with pkgs; [
+{ pkgs, inputs, ... }: {
+  nixpkgs.overlays = [ inputs.fenix.overlays.default ];
+  home.packages = with pkgs; [
     (fenix.complete.withComponents [
       "cargo"
       "clippy"
