@@ -8,7 +8,6 @@
   services.playerctld.enable = true;
 
   programs.cava.enable = true;
-  programs.ncmpcpp.enable = true;
 
   home.packages = with pkgs; [ ffmpeg sptlrx ];
 }
