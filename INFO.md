@@ -37,6 +37,7 @@
 - [x] kitty
 - [x] [Yubikey](https://nixos.wiki/wiki/Yubikey)
   - [x] SSH support
+  - [x] GnuPG support
 - [x] git & delta
 - [x] GnuPG
 - [x] gh
@@ -47,13 +48,16 @@
   - [x] ff2mpv
   - [ ] Search engines
     - [ ] Search suggestions for supported engines
+      - [ ] MDN
   - [ ] YouTube different shortcuts (h and l to skip 5 secs)
 - [ ] Desktop
   - [ ] [Spotify](https://nixos.wiki/wiki/Spotify) & [spicetify](https://github.com/the-argus/spicetify-nix)
   - [x] Discord
     - [x] Screen sharing support on Wayland via xwaylandvideobridge
-  - [x] Dolphin (or other file manager)
+  - [x] File manager (dolphin)
   - [ ] Image viewer (gwenview)
+  - [ ] Archive viewer (ark)
+  - [ ] PDF viewer
   - [ ] GTK Theme
   - [ ] QT Theme
   - [ ] Mime types
@@ -65,6 +69,7 @@
   - [x] yt-dlp
 - [x] mpd & mpris
 - [x] playerctld (playerctl daemon)
+- [ ] sptlrx
 - [ ] Add assets
   - [ ] Dunst
 - [ ] Add scripts
@@ -77,6 +82,7 @@
     - [ ] brightnessctl
   - [x] dunst
   - [ ] application launcher (rofi)
+  - [ ] screenshots (grimblast)
 - [ ] SDDM
   - [ ] Autologin
   - [ ] Plymouth
@@ -106,7 +112,11 @@
   - [ ] ssh
 - [ ] Fonts
   - [ ] kitty
+  - [ ] Chainese glyphs support
+  - [ ] FiraCode NF
+  - [ ] JetBrainsMono NF
 - [ ] System-wide spell checking
+- [ ] Swap ([Wiki](https://nixos.wiki/wiki/Swap))
 - [ ] Hibernation
 - [ ] noisetorch
 - [ ] Firewall
@@ -127,7 +137,9 @@
   - [ ] Games
   - [ ] Enable modules inside flakes
 - [ ] ISO
-- [ ] Additional configuration
+- [ ] Additional features
+  - [ ] Expo dev environment (android studio)
+  - [ ] MacOS KVM
   - [Arch Linux tweaks](https://gist.github.com/lbrame/1678c00213c2bd069c0a59f8733e0ee6)
   - [ ] System-wide single colour theme
   - [ ] Kamack38 square plymouth theme
@@ -135,7 +147,25 @@
   - [ ] [Package firefox extensions](https://sr.ht/~rycee/mozilla-addons-to-nix/)
   - [ ] Block all newly connected USB devices and easily allow to unblock them
   - [ ] Secure boot ([Secure boot on NixOS with TPM](https://jnsgr.uk/2024/04/nixos-secure-boot-tpm-fde/))
+  - [ ] Full typst editing workflow
+    - [ ] Typst in NeoVim using [Tinymist](https://github.com/Myriad-Dreamin/tinymist)
+  - [ ] LanguageTool
+    - [ ] Custom server
+    - [ ] NeoVim
+  - [ ] Yubikey TOTP code generation
+  - [ ] Command/Keybinding to view cheatsheets (NeoVim, Linux)
+  - [ ] Sync between android and NixOS
 - [ ] Additional programs
+  - [ ] Speech recognition ([Whisper](https://github.com/openai/whisper))
+    - [ ] Live speech recognition (maybe [WhisperLive](https://github.com/collabora/WhisperLive))
+  - [ ] OCR ([surya](https://github.com/VikParuchuri/surya))
+    - [ ] Convert PDF with images using OCR
+  - [ ] Generate live subtitles for music files
+  - [ ] Screen recording
+  - [ ] Voice recording
   - [ ] Local GPT assistant that parses files and gives information found in them when asked
+    - [ ] [tgpt](https://github.com/aandrew-me/tgpt)
+    - [ ] [GPT4All](https://github.com/nomic-ai/gpt4all) or [PrivateGPT](https://github.com/zylon-ai/private-gpt)
+  - [ ] Subtitle for movies generation ([subsai](https://github.com/abdeladim-s/subsai))
 - [ ] Learn nixos commands
 - [ ] Learn how to pin packages (easily)
