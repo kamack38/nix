@@ -1,4 +1,33 @@
-# INFO
+# NixOS configuration
+
+## Installation
+
+Before formatting the disk make sure that the disk has some empty space.
+
+To clear the WHOLE disk run:
+
+```bash
+sgdisk -Z /dev/disk
+```
+
+### Formatting disk
+
+To format the disk run:
+
+```bash
+./format.sh /dev/disk
+```
+
+### Installing NixOS
+
+After formatting the disk generated the config and run:
+
+```bash
+nixos-generate-config --root /mnt
+nixos-install
+```
+
+## NixOS information
 
 - [Noogle](https://noogle.dev/)
 - [Options](https://search.nixos.org/options?channel=24.05&size=50&sort=relevance&type=packages&query=fetch)
@@ -6,7 +35,7 @@
 - [Nixy](https://github.com/anotherhadi/nixy/blob/main/hosts/laptop/configuration.nix)
 - [MyNixOs](https://mynixos.com/)
 
-# TODO
+## TODO
 
 - [ ] Check if playerctl is enabled
 
