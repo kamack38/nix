@@ -34,6 +34,7 @@ nixos-install
 - [Packages](https://search.nixos.org/packages?channel=24.05&size=50&sort=relevance&type=packages&query=fetch)
 - [Nixy](https://github.com/anotherhadi/nixy/blob/main/hosts/laptop/configuration.nix)
 - [MyNixOs](https://mynixos.com/)
+- [nix.dev](https://nix.dev/)
 
 ## TODO
 
