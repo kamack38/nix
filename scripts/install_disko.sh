@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Exit on error
 set -e
@@ -29,7 +29,7 @@ while true; do
 		echo -e "\n${RED}:: ${BWHITE}Passwords do not match. Please try again.${NC}"
 	fi
 done
-echo -n "${luks_password}" >  /tmp/secret.key
+echo -n "${luks_password}" >/tmp/secret.key
 
 # Run disko
 sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko ./disko-config.nix --arg device "\"$1\"" 2>&1 | tee disko-output.log
