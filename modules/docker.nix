@@ -1,11 +1,11 @@
 { lib, config, ... }:
-let cfg = config.docker;
+let cfg = config.modules.docker;
 in {
-  options.docker = { enable = lib.mkEnableOption "Docker"; };
+  options.modules.docker = { enable = lib.mkEnableOption "Docker"; };
 
   config = lib.mkIf cfg.enable {
     virtualisation.docker.enable = true;
     users.users.${config.var.username}.extraGroups = [ "docker" ];
-    virtualisation.docker.storageDriver = "btrfs";
+    virtualisation.docker.storageDriver = lib.mkDefault "btrfs";
   };
 }

@@ -1,8 +1,5 @@
-{ config, pkgs, utils, ... }:
-let inherit (utils) readFromDir;
-in {
-  imports = (readFromDir ./dev) ++ (readFromDir ./programs)
-    ++ [ ../variables.nix ];
+{ config, pkgs, ... }: {
+  imports = [ ./desktop ./dev ./programs ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -32,6 +29,8 @@ in {
     #   org.gradle.daemon.idletimeout=3600000
     # '';
   };
+
+  desktop.enable = true;
 
   programs.home-manager.enable = true;
   home.stateVersion = "24.05"; # Please read the comment before changing.

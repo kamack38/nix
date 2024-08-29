@@ -20,18 +20,24 @@ To format the disk run:
 
 ### Installing NixOS
 
-After formatting the disk generated the config and run:
+After formatting the disk, generate the config and run:
 
 ```bash
-nixos-generate-config --root /mnt
-nixos-install
+sudo su
+git clone https://github.com/kamack38/nixos /mnt/home/kamack38/dotfiles
+nix-shell -p git nixUnstable
+nixos-generate-config --show-hardware-config>/mnt/home/kamack38/dotfiles/hardware-configuration.nix
+nixos-install --flake /mnt/home/kamack38/dotfiles#default
 ```
+
+The default user is `kamack38` with password `password`
 
 ## NixOS information
 
+- [NixOS and flakes guide](https://nixos-and-flakes.thiscute.world)
 - [Noogle](https://noogle.dev/)
-- [Options](https://search.nixos.org/options?channel=24.05&size=50&sort=relevance&type=packages&query=fetch)
-- [Packages](https://search.nixos.org/packages?channel=24.05&size=50&sort=relevance&type=packages&query=fetch)
+- [Options](https://search.nixos.org/options?channel=24.05)
+- [Packages](https://search.nixos.org/packages?channel=24.05)
 - [Nixy](https://github.com/anotherhadi/nixy/blob/main/hosts/laptop/configuration.nix)
 - [MyNixOs](https://mynixos.com/)
 - [nix.dev](https://nix.dev/)
@@ -39,6 +45,10 @@ nixos-install
 ## TODO
 
 - [ ] Check if playerctl is enabled
+
+- [ ] Fix config
+- [ ] Conditional module imports
+- [ ] Enabling NixOS options in hm modules
 
 - [x] nh - NixOs helper
 - [x] Locales
@@ -61,6 +71,7 @@ nixos-install
 - [ ] [Neovim](https://nixos.wiki/wiki/Neovim)
   - [ ] Install LSPs
   - [ ] Install Formatters
+  - [ ] Fix following links in Neovim docs 
   - [ ] Harpoon with harpoon-line
   - [ ] Typst inline preview plugin (mathematical equations are separately complied and showed above their code)
   - [ ] rustceanvim

@@ -1,21 +1,30 @@
-{ pkgs, config, inputs, ... }: {
+{ pkgs, config, inputs, ... }:
+let ffPlugins = pkgs.callPackage inputs.firefox-addons { };
+in {
   nixpkgs.config = {
     allowUnfree = true;
-    allowUnfreePredicate = (_: true);
+    allowUnfreePredicate = _: true;
   };
+  # nixpkgs.overlays = [
+  #   (final: prev: {
+  #     firefox-addons =
+  #       inputs.firefox-addons.packages.${final.stdenv.hostPlatform.system};
+  #   })
+  # ];
+
   programs.firefox = {
     enable = true;
     package = pkgs.firefox-devedition;
-    nativeMessagingHosts = [ pkgs.ff2mpv ];
+    # nativeMessagingHosts = [ pkgs.ff2mpv ];
     profiles.${config.var.username} = {
       isDefault = true;
-      extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
-        bypass-paywalls-clean
+      extensions = with ffPlugins; [
+        # bypass-paywalls-clean
         ublock-origin
         darkreader
         vimium
         no-pdf-download
-        languagetool
+        # languagetool
         steam-database
 
         # Consents
@@ -49,7 +58,6 @@
               "https://brave.com/static-assets/images/cropped-brave_appicon_release-32x32.png";
             definedAliases = [ "@brave" ];
           };
-
           "Youtube" = {
             urls = [{
               template = "https://www.youtube.com/results";
@@ -82,7 +90,6 @@
             }];
             definedAliases = [ "@crates" "@cargo" ];
           };
-
           "Cambridge Dictionary (EN/PL)" = {
             urls = [
               {
@@ -101,7 +108,6 @@
               "https://dictionary.cambridge.org/external/images/favicon.ico?version=6.0.27";
             definedAliases = [ "@cmb" ];
           };
-
           "Arch wiki" = {
             urls = [{
               template = "https://wiki.archlinux.org/index.php";
@@ -112,7 +118,6 @@
             }];
             definedAliases = [ "@aw" "@arch-wiki" ];
           };
-
           "MyNixOS" = {
             urls = [{
               template = "https://mynixos.com/search";
@@ -125,7 +130,6 @@
               "''${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "nix" ];
           };
-
           "Nix Packages" = {
             urls = [{
               template = "https://search.nixos.org/packages";
@@ -145,7 +149,6 @@
               "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@np" ];
           };
-
           "NixOS Wiki" = {
             urls = [{
               template =
@@ -163,13 +166,86 @@
         };
       };
       settings = {
-
         "browser.newtabpage.activity-stream.section.highlights.includePocket" =
           false;
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
         "browser.newtabpage.activity-stream.topSitesRows" = 2;
-        "browser.newtabpage.pinned" = ''
-          [{"url":"https://www.youtube.com/?gl=PL","label":"YouTube","baseDomain":"youtube.com"},{"url":"https://www.twitch.tv/","label":"Twitch","baseDomain":"twitch.tv"},{"url":"https://steamcommunity.com/id/kamack38/","label":"Steam","baseDomain":"steamcommunity.com"},{"url":"https://twitter.com/home?lang=pl","label":"twitter","baseDomain":"twitter.com"},{"url":"https://google.com","label":"@google","searchTopSite":true,"baseDomain":"google.com"},{"url":"http://127.0.0.1:5500/index.html","label":"127.0.0.1","baseDomain":"127.0.0.1"},{"url":"https://coolors.co/u/kamack38","label":"coolors","baseDomain":"coolors.co"},null,{"url":"https://portal.librus.pl/rodzina/synergia/loguj","label":"portal.librus"},{"url":"https://www.epicgames.com/store/pl/free-games","label":"epicgames","baseDomain":"epicgames.com"},{"url":"https://developer.mozilla.org/pl/docs/Web/HTML","label":"MDN","baseDomain":"developer.mozilla.org"},{"url":"https://steamdb.info/upcoming/free/","label":"steamdb","baseDomain":"steamdb.info"},{"url":"https://github.com/kamack38","label":"github","baseDomain":"github.com"},{"url":"https://kamack38.github.io/","label":"kamack38","baseDomain":"kamack38.github.io"},{"url":"https://www.faceit.com/pl/players/Kamack38","label":"Faceit","baseDomain":"faceit.com"},{"url":"http://178-37-18-4.adsl.inetia.pl/","label":"netiaspot","baseDomain":"178-37-18-4.adsl.inetia.pl"}]'';
+        "browser.newtabpage.pinned" = # json
+          ''
+            [
+            	{
+            		"url": "https://www.youtube.com/?gl=PL",
+            		"label": "YouTube",
+            		"baseDomain": "youtube.com"
+            	},
+            	{
+            		"url": "https://www.twitch.tv/",
+            		"label": "Twitch",
+            		"baseDomain": "twitch.tv"
+            	},
+            	{
+            		"url": "https://steamcommunity.com/id/kamack38/",
+            		"label": "Steam",
+            		"baseDomain": "steamcommunity.com"
+            	},
+            	{
+            		"url": "https://twitter.com/home?lang=pl",
+            		"label": "twitter",
+            		"baseDomain": "twitter.com"
+            	},
+            	{
+            		"url": "https://google.com",
+            		"label": "@google",
+            		"searchTopSite": true,
+            		"baseDomain": "google.com"
+            	},
+            	{
+            		"url": "http://127.0.0.1:5500/index.html",
+            		"label": "127.0.0.1",
+            		"baseDomain": "127.0.0.1"
+            	},
+            	{
+            		"url": "https://coolors.co/u/kamack38",
+            		"label": "coolors",
+            		"baseDomain": "coolors.co"
+            	},
+            	null,
+            	{
+            		"url": "https://portal.librus.pl/rodzina/synergia/loguj",
+            		"label": "portal.librus"
+            	},
+            	{
+            		"url": "https://www.epicgames.com/store/pl/free-games",
+            		"label": "epicgames",
+            		"baseDomain": "epicgames.com"
+            	},
+            	{
+            		"url": "https://developer.mozilla.org/pl/docs/Web/HTML",
+            		"label": "MDN",
+            		"baseDomain": "developer.mozilla.org"
+            	},
+            	{
+            		"url": "https://steamdb.info/upcoming/free/",
+            		"label": "steamdb",
+            		"baseDomain": "steamdb.info"
+            	},
+            	{
+            		"url": "https://github.com/kamack38",
+            		"label": "github",
+            		"baseDomain": "github.com"
+            	},
+            	{
+            		"url": "https://kamack38.github.io/",
+            		"label": "kamack38",
+            		"baseDomain": "kamack38.github.io"
+            	},
+            	{
+            		"url": "https://www.faceit.com/pl/players/Kamack38",
+            		"label": "Faceit",
+            		"baseDomain": "faceit.com"
+            	}
+            ]
+          '';
         "browser.startup.page" = 3;
 
         # Don't disable extensions dropped in to a system

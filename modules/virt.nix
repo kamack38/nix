@@ -1,15 +1,12 @@
-{ inputs, lib, config, ... }:
-let
-  cfg = config.virt;
-  inherit (builtins) attrValues;
+{ lib, home-manager, config, ... }:
+let cfg = config.modules.virt;
 in {
-  imports =
-    attrValues { inherit (inputs.home-manager.nixosModules) home-manager; };
-  options.virt = { enable = lib.mkEnableOption "Virtualisation"; };
+  options.modules.virt = { enable = lib.mkEnableOption "Virtualisation"; };
 
   config = lib.mkIf cfg.enable {
     virtualisation.libvirtd.enable = true;
     programs.virt-manager.enable = true;
+    users.extraGroups.libvirtd.members = [ config.var.username ];
     home-manager.sharedModules = [{
       dconf = {
         enable = true;

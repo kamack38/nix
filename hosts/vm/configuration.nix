@@ -1,11 +1,5 @@
 { config, pkgs, inputs, lib, ... }: {
-  imports = [ ./hardware-configuration.nix ./system ];
-
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.consoleMode = "auto";
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.tmp.cleanOnBoot = true;
+  imports = [ ./hardware-configuration.nix ];
 
   console = {
     earlySetup = true;
@@ -20,13 +14,14 @@
   users.users.${config.var.username} = {
     isNormalUser = true;
     initialPassword = "password";
-    extraGroups = [ "wheel" "networkmanager" "libvirtd" ];
+    extraGroups = [ "wheel" ];
     shell = pkgs.fish;
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = { ${config.var.username} = import ./home; };
+    extraSpecialArgs = { inherit inputs config; };
+    useGlobalPkgs = true;
+    users = { ${config.var.username} = import ./../../home; };
   };
 
   # Shell
@@ -52,8 +47,11 @@
     clean.extraArgs = "--keep-since 4d --keep 3";
   };
 
-  modules.desktop.enable = true;
-  modules.bluetooth.enable = true;
+  modules = {
+    desktop.enable = true;
+    bluetooth.enable = true;
+    systemd-boot.enable = true;
+  };
   # services = {
   #   xserver = {
   #     enable = true;

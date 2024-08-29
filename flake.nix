@@ -31,31 +31,35 @@
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
+      flake = false;
     };
   };
 
-  outputs = { nixpkgs, ... }@inputs: {
-    nixosConfigurations = {
-      default = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          inputs.disko.nixosModules.default
-          inputs.home-manager.nixosModules.default
-          (import ./disko-config.nix { device = "/dev/vda"; })
-          ./configuration.nix
-        ];
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+    let
+      system = "x86_64-linux";
+
+      config = {
+        system = system;
+        allowUnfree = true;
       };
-      # iso = {
-      #   system = "x86_64-linux";
-      #   specialArgs = { inherit inputs; };
-      #   modules = [
-      #     (nixpkgs
-      #       + "/nixos/modules//installer/cd-dvd/installation-cd-minimal.nix")
-      #     inputs.home-manager.nixosModules.default
-      #     ./configuration.nix
-      #   ];
-      # };
+    in {
+      nixosConfigurations = {
+        default = nixpkgs.lib.nixosSystem {                                                 
+          system = "x86_64-linux";                                                      
+          specialArgs = { inherit inputs; };                                            
+          modules = [                                                                   
+            ./variables.nix
+            ./modules
+            inputs.disko.nixosModules.default                                           
+            inputs.home-manager.nixosModules.default                                    
+            (import ./disko-config.nix { device = "/dev/vda"; })                        
+            ./configuration.nix                                                         
+          ];
+        };      
+        # vm = import ./hosts/vm {
+        #   inherit config nixpkgs inputs system home-manager self;
+        # };
+      };
     };
-  };
 }

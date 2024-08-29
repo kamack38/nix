@@ -1,0 +1,32 @@
+warning: Git tree '/home/kamack38/dotfiles' is dirty
+evaluating flake...
+error:
+       … while checking flake output 'nixosConfigurations'
+
+         at /nix/store/brvk34p74khpfd5xmqqsbfsvqb9g60ic-source/flake.nix:47:7:
+
+           46|     in {
+           47|       nixosConfigurations = {
+             |       ^
+           48|         default = nixpkgs.lib.nixosSystem {
+
+       … while checking the NixOS configuration 'nixosConfigurations.default'
+
+         at /nix/store/brvk34p74khpfd5xmqqsbfsvqb9g60ic-source/flake.nix:48:9:
+
+           47|       nixosConfigurations = {
+           48|         default = nixpkgs.lib.nixosSystem {
+             |         ^
+           49|           system = "x86_64-linux";
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: attribute 'var' missing
+
+       at /nix/store/brvk34p74khpfd5xmqqsbfsvqb9g60ic-source/home/default.nix:6:19:
+
+            5|   # manage.
+            6|   home.username = config.var.username;
+             |                   ^
+            7|   home.homeDirectory = config.var.homeDirectory;
+       Did you mean pam?

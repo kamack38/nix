@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
-let cfg = config.bluetooth;
+let cfg = config.modules.bluetooth;
 in {
-  options.bluetooth = { enable = lib.mkEnableOption "Bluetooth"; };
+  options.modules.bluetooth = { enable = lib.mkEnableOption "Bluetooth"; };
 
   config = lib.mkIf cfg.enable {
     hardware.bluetooth.enable = true; # enables support for Bluetooth
