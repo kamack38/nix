@@ -42,7 +42,7 @@ The default user is `kamack38` with password `password`
 - [MyNixOs](https://mynixos.com/)
 - [nix.dev](https://nix.dev/)
 
-## TODO
+## Features
 
 - [ ] Check if playerctl is enabled
 
@@ -123,6 +123,7 @@ The default user is `kamack38` with password `password`
     - [ ] brightnessctl
   - [x] dunst
   - [ ] application launcher (rofi)
+    - [ ] new config
   - [ ] screenshots (grimblast)
 - [ ] SDDM
   - [ ] Autologin
@@ -179,12 +180,17 @@ The default user is `kamack38` with password `password`
   - [ ] Enable modules inside flakes
 - [ ] ISO
 - [ ] Additional features
+  - [ ] [Distrobox](https://distrobox.it/) for easy VM spinning ([Wiki](https://nixos.wiki/wiki/Distrobox))
+  - [ ] Transfering files via [MTP](https://nixos.wiki/wiki/MTP) ([Arch Wiki](https://wiki.archlinux.org/title/Media_Transfer_Protocol))
+  - [ ] Android phone and file syncing
   - [ ] Expo dev environment (android studio)
   - [ ] MacOS KVM
   - [Arch Linux tweaks](https://gist.github.com/lbrame/1678c00213c2bd069c0a59f8733e0ee6)
   - [ ] System-wide single colour theme
   - [ ] Kamack38 square plymouth theme
   - [ ] Periodic automatic backups (they send a notification when the backup time has come and send them repeatedly in small time intervals until a thumbdrive containing a certaing directory is connected and the backup completed (in the future switch to homeserver remote backups))
+    - [ ] [Pika Backup](https://apps.gnome.org/PikaBackup/)
+    - ~[Btrbk](https://github.com/digint/btrbk)~
   - [ ] [Package firefox extensions](https://sr.ht/~rycee/mozilla-addons-to-nix/)
   - [ ] Block all newly connected USB devices and easily allow to unblock them
   - [ ] Secure boot ([Secure boot on NixOS with TPM](https://jnsgr.uk/2024/04/nixos-secure-boot-tpm-fde/))
