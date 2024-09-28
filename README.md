@@ -102,6 +102,7 @@ The default user is `kamack38` with password `password`
   - [ ] GTK Theme
   - [ ] QT Theme
   - [ ] Mime types
+  - [ ] Libre office ([Config video](https://www.youtube.com/watch?v=x44bda1dz84))
 - [x] Rust toolchain
 - [x] mpv
   - [x] sponsorblock
