@@ -56,7 +56,7 @@ The default user is `kamack38` with password `password`
 - [x] TTY colours
 - [x] fish
 - [x] sudo insults and pw_feedback
-- [x] cli programs
+- [x] CLI programs
   - [x] jq
   - [x] fd
   - [x] dust
@@ -71,11 +71,11 @@ The default user is `kamack38` with password `password`
 - [ ] [Neovim](https://nixos.wiki/wiki/Neovim)
   - [ ] Install LSPs
   - [ ] Install Formatters
-  - [ ] Fix following links in Neovim docs 
+  - [ ] Add support for following links in Neovim docs and Markdown
   - [ ] Harpoon with harpoon-line
-  - [ ] Typst inline preview plugin (mathematical equations are separately complied and showed above their code)
+  - [ ] Typst inline preview plugin (mathematical equations are separately
+        complied and showed above their code)
   - [ ] rustceanvim
-- [x] kitty
 - [x] [Yubikey](https://nixos.wiki/wiki/Yubikey)
   - [x] SSH support
   - [x] GnuPG support
@@ -92,7 +92,8 @@ The default user is `kamack38` with password `password`
       - [ ] MDN
   - [ ] YouTube different shortcuts (h and l to skip 5 secs)
 - [ ] Desktop
-  - [ ] [Spotify](https://nixos.wiki/wiki/Spotify) & [spicetify](https://github.com/the-argus/spicetify-nix)
+  - [ ] [Spotify](https://nixos.wiki/wiki/Spotify)
+    - [ ] [spicetify](https://github.com/the-argus/spicetify-nix)
   - [x] Discord
     - [x] Screen sharing support on Wayland via xwaylandvideobridge
   - [x] File manager (dolphin)
@@ -102,7 +103,34 @@ The default user is `kamack38` with password `password`
   - [ ] GTK Theme
   - [ ] QT Theme
   - [ ] Mime types
-  - [ ] Libre office ([Config video](https://www.youtube.com/watch?v=x44bda1dz84))
+  - [x] kitty
+  - [ ] Libre office
+        ([Config video](https://www.youtube.com/watch?v=x44bda1dz84))
+  - [ ] Rofi
+    - [ ] Bluetooth devices picker
+    - [ ] Network picker
+    - [ ] New config
+  - [x] Hyprlock
+    - [ ] Add scripts
+  - [x] Hypridle
+  - [x] Hyprpaper
+  - [ ] waybar
+    - [ ] brightnessctl
+  - [x] dunst
+    - [ ] Add assets
+  - [ ] screenshots (grimblast)
+  - [ ] Hyprland (with current settings)
+  - [ ] Coursor theme
+    - [ ] Hyprcursor (maybe)
+    - [ ] Fluent coursor theme
+  - [ ] Fluent dark icon theme
+- [ ] SDDM
+  - [ ] Autologin
+  - [ ] Plymouth
+    - [ ] [adi1090x themes](https://github.com/adi1090x/plymouth-themes/pull/46/files)
+    - [ ] GreenLeaf plymouth theme
+  - [ ] GreenLeaf Theme
+    - [ ] Create theme repo
 - [x] Rust toolchain
 - [x] mpv
   - [x] sponsorblock
@@ -112,31 +140,6 @@ The default user is `kamack38` with password `password`
 - [x] mpd & mpris
 - [x] playerctld (playerctl daemon)
 - [ ] sptlrx
-- [ ] Add assets
-  - [ ] Dunst
-- [ ] Add scripts
-  - [ ] Hyprlock
-- [ ] Hyprland (with current settings)
-  - [x] Hyprlock
-  - [x] Hypridle
-  - [x] Hyprpaper
-  - [ ] waybar
-    - [ ] brightnessctl
-  - [x] dunst
-  - [ ] application launcher (rofi)
-    - [ ] new config
-  - [ ] screenshots (grimblast)
-- [ ] SDDM
-  - [ ] Autologin
-  - [ ] Plymouth
-    - [ ] [adi1090x themes](https://github.com/adi1090x/plymouth-themes/pull/46/files)
-    - [ ] GreenLeaf plymouth theme
-  - [ ] GreenLeaf Theme
-    - [ ] Create theme repo
-- [ ] Coursor theme
-  - [ ] Hyprcursor (maybe)
-  - [ ] Fluent coursor theme
-- [ ] Fluent dark icon theme
 - [ ] Hardware configuration
   - [ ] Asusctl
   - [ ] Openrazer
@@ -181,22 +184,29 @@ The default user is `kamack38` with password `password`
   - [ ] Enable modules inside flakes
 - [ ] ISO
 - [ ] Additional features
-  - [ ] [Distrobox](https://distrobox.it/) for easy VM spinning ([Wiki](https://nixos.wiki/wiki/Distrobox))
-  - [ ] Transfering files via [MTP](https://nixos.wiki/wiki/MTP) ([Arch Wiki](https://wiki.archlinux.org/title/Media_Transfer_Protocol))
+  - [ ] [Distrobox](https://distrobox.it/) for easy VM spinning
+        ([Wiki](https://nixos.wiki/wiki/Distrobox))
+  - [ ] Transfering files via [MTP](https://nixos.wiki/wiki/MTP)
+        ([Arch Wiki](https://wiki.archlinux.org/title/Media_Transfer_Protocol))
   - [ ] Android phone and file syncing
   - [ ] Expo dev environment (android studio)
   - [ ] MacOS KVM
-  - [Arch Linux tweaks](https://gist.github.com/lbrame/1678c00213c2bd069c0a59f8733e0ee6)
+  - [ ] [Arch Linux tweaks](https://gist.github.com/lbrame/1678c00213c2bd069c0a59f8733e0ee6)
   - [ ] System-wide single colour theme
   - [ ] Kamack38 square plymouth theme
-  - [ ] Periodic automatic backups (they send a notification when the backup time has come and send them repeatedly in small time intervals until a thumbdrive containing a certaing directory is connected and the backup completed (in the future switch to homeserver remote backups))
+  - [ ] Periodic automatic backups (they send a notification when the backup
+        time has come and send them repeatedly in small time intervals until a
+        thumbdrive containing a certaing directory is connected and the backup
+        completed (in the future switch to homeserver remote backups))
     - [ ] [Pika Backup](https://apps.gnome.org/PikaBackup/)
-    - ~[Btrbk](https://github.com/digint/btrbk)~
+    - ~~[Btrbk](https://github.com/digint/btrbk)~~
   - [ ] [Package firefox extensions](https://sr.ht/~rycee/mozilla-addons-to-nix/)
   - [ ] Block all newly connected USB devices and easily allow to unblock them
-  - [ ] Secure boot ([Secure boot on NixOS with TPM](https://jnsgr.uk/2024/04/nixos-secure-boot-tpm-fde/))
+  - [ ] Secure boot
+        ([Secure boot on NixOS with TPM](https://jnsgr.uk/2024/04/nixos-secure-boot-tpm-fde/))
   - [ ] Full typst editing workflow
-    - [ ] Typst in NeoVim using [Tinymist](https://github.com/Myriad-Dreamin/tinymist)
+    - [ ] Typst in NeoVim using
+          [Tinymist](https://github.com/Myriad-Dreamin/tinymist)
   - [ ] LanguageTool
     - [ ] Custom server
     - [ ] NeoVim
@@ -205,15 +215,19 @@ The default user is `kamack38` with password `password`
   - [ ] Sync between android and NixOS
 - [ ] Additional programs
   - [ ] Speech recognition ([Whisper](https://github.com/openai/whisper))
-    - [ ] Live speech recognition (maybe [WhisperLive](https://github.com/collabora/WhisperLive))
+    - [ ] Live speech recognition (maybe
+          [WhisperLive](https://github.com/collabora/WhisperLive))
   - [ ] OCR ([surya](https://github.com/VikParuchuri/surya))
     - [ ] Convert PDF with images using OCR
   - [ ] Generate live subtitles for music files
   - [ ] Screen recording
   - [ ] Voice recording
-  - [ ] Local GPT assistant that parses files and gives information found in them when asked
+  - [ ] Local GPT assistant that parses files and gives information found in
+        them when asked
     - [ ] [tgpt](https://github.com/aandrew-me/tgpt)
-    - [ ] [GPT4All](https://github.com/nomic-ai/gpt4all) or [PrivateGPT](https://github.com/zylon-ai/private-gpt)
-  - [ ] Subtitle for movies generation ([subsai](https://github.com/abdeladim-s/subsai))
+    - [ ] [GPT4All](https://github.com/nomic-ai/gpt4all) or
+          [PrivateGPT](https://github.com/zylon-ai/private-gpt)
+  - [ ] Subtitle for movies generation
+        ([subsai](https://github.com/abdeladim-s/subsai))
 - [ ] Learn nixos commands
 - [ ] Learn how to pin packages (easily)
