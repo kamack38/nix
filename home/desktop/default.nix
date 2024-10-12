@@ -11,5 +11,6 @@
   #   ./hyprland.nix
   #   ./hyprlock.nix
   #   ./hyprpaper.nix
+  #   ./apps.nix
   # ];
 }
