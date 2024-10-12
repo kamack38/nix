@@ -97,9 +97,9 @@ The default user is `kamack38` with password `password`
   - [x] Discord
     - [x] Screen sharing support on Wayland via xwaylandvideobridge
   - [x] File manager (dolphin)
-  - [ ] Image viewer (gwenview)
-  - [ ] Archive viewer (ark)
-  - [ ] PDF viewer
+  - [x] Image viewer (gwenview)
+  - [x] Archive viewer (ark)
+  - [x] PDF viewer
   - [ ] GTK Theme
   - [ ] QT Theme
   - [ ] Mime types
